@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --card1: rgb(69, 211, 211);
+  --card2: hsl(0, 78%, 62%);
+  --card3: hsl(34, 97%, 64%);
+  --card4: hsl(212, 86%, 64%);
+
+  --text1: hsl(234, 12%, 34%);
+  --text2: hsl(229, 6%, 66%);
+  --text3: hsl(0, 0%, 98%);
+}
+
+html {
+  font-family: "Libre Barcode 39", cursive;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+h1,
+h2,
+p {
+  margin: 8px 0px;
+}
+h2 {
+  font-weight: 200;
+  font-size: 2.2em;
+  color: rgba(0, 0, 0, 0.4);
+}
+p {
+  color: rgba(0, 0, 0, 0.4);
+}
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intro {
+  margin-top: 64px;
+  text-align: center;
+  width: 80%;
+  max-width: 560px;
+}
+.four-card {
+  margin-top: 32px;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  height: fit-content;
+}
+.two-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card {
+  position: relative;
+  width: 80%;
+  max-width: 400px;
+  height: 275px;
+  box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.4);
+  margin: 28px;
+  padding: 32px;
+  border-radius: 8px;
+}
+.super {
+  border-top: 5px solid var(--card1);
+}
+.team {
+  border-top: 5px solid var(--card2);
+}
+.karma {
+  border-top: 5px solid var(--card3);
+}
+.calc {
+  border-top: 5px solid var(--card4);
+}
+.main-img {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+}
+
+@media (max-width: 1399px) {
+  .four-card {
+    justify-content: center;
+    max-width: 1000px;
+    flex-wrap: wrap;
+  }
+  .two-card {
+    order: 1;
+    flex-direction: row;
+  }
+  h1,
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 900px) {
+  .four-card {
+    flex-direction: column;
+  }
+  .two-card {
+    flex-direction: column;
+  }
+}
