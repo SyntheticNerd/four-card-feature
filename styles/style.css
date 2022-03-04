@@ -110,4 +110,8 @@ p {
   .two-card {
     flex-direction: column;
   }
+  .card {
+    width: 80%;
+    max-width: 400px;
+  }
 }
